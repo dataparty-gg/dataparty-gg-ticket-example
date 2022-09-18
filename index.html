@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="script.js" defer></script>
+		<script src="assets/vanilla-tilt.js" defer></script>
+	</head>
+	<body>
+		<div
+			class="ticket-wrapper"
+			data-tilt
+			data-tilt-max="1"
+			data-tilt-speed="2500"
+			data-tilt-perspective="250"
+			data-tilt-reverse="true"
+			data-tilt-scale="1.04"
+		>
+			<section class="ticket">
+				<div class="ticket-content">
+					<div>
+						<h2>Jon Martin Stuberg</h2>
+						<span>/0040-450c5-a2647-44da1</span>
+					</div>
+				</div>
+				<a class="ticket-clip" href="#">#00001</a>
+				<div class="ticket-container">
+					<svg width="680" height="340">
+						<linearGradient id="MyGradient">
+							<stop offset="5%" stop-color="#F60" />
+							<stop offset="95%" stop-color="#FF6" />
+						</linearGradient>
+						<mask id="ticket">
+							<rect width="100%" height="100%" fill="white" rx="1rem" />
+							<circle fill="#000" r="32" cy="50%" />
+							<circle fill="#000" r="32" cy="50%" cx="100%" />
+							<line
+								stroke="#000"
+								x1="500"
+								y1="0"
+								x2="500"
+								y2="100%"
+								stroke-dasharray="10 1rem"
+								stroke-dashoffset=".25rem"
+								stroke-width="3"
+								stroke-linecap="round"
+							/>
+						</mask>
+
+						<rect fill="#1C1826" height="100%" width="100%" mask="url(#ticket)" />
+						<rect
+							id="ticket-clip"
+							fill="#1C1826"
+							width="200"
+							height="100%"
+							x="500"
+							mask="url(#ticket)"
+						/>
+
+						<!-- <cAircle id="donut" r="0" cx="100" cy="100" mask="url(#hole)" /> -->
+					</svg>
+				</div>
+			</section>
+		</div>
+	</body>
+</html>
